@@ -20,7 +20,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body id="body">
 
 
     <div class="menubar container-fluid">
@@ -42,7 +42,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link diff" onclick="myFunction()">
+                    <a class="nav-link diff" id="open" onclick="document.getElementById('id01').style.display='block'">
                         <span class="fa fa-address-book-o"> </span>&nbspĐăng nhập
                     </a>
                 </li>
@@ -62,7 +62,9 @@
     </div>
 
 
-    <div class="container1" id="login" style="margin-top: 2%; margin-bottom: 5%; margin-left: 35%">
+
+    <!-- <div class="container1" id="login" style="margin-top: 2%; margin-bottom: 5%; margin-left: 35%">
+        <button class="close" id="close">X</button>
         <h1 class="testsign">Đăng nhập Hola market!</h1>
 
         <div class="row1" style="width: 70%;">
@@ -98,7 +100,105 @@
         </div>
 
 
+    </div> -->
+
+    <!-- <div style=" padding-right: 13px;" class="modal" id="login">
+        <div class="container1"  style="margin-top: 2%; margin-bottom: 5%; margin-left: 35%">
+        <button class="close" id="close">X</button>
+        <h1 class="testsign row1">Đăng nhập Hola market!</h1>
+
+        <div class="row1" style="width: 70%;">
+            <div class="input-group input-group-icon">
+                <input type="text" placeholder="Email" />
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row1" style="width: 70%;">
+            <div class="input-group input-group-icon">
+                <input type="password" placeholder="Password" />
+                <div class="input-icon">
+                    <i class="fa fa-key"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row1"> 
+         <button style="" type="button" class="btn btn-success1">Đăng nhập</button>
+        </div>
+
+
+
+        <div class="row1" style="margin-top: 5%">
+
+            <div class="col-half testsign">
+                <a href="">Quên mật khẩu</a>
+            </div>
+            <div class="col-half testsign">Chưa có tài khoản?
+                <a href="SignUp.html"> Đăng ký ngay!</a>
+            </div>
+        </div>
+
+        <div class="row1" style="margin-top: 5%">
+
+                <div class="testsign">
+                    <a href="" class="btn btn-facebook" style="float:left;width:50%;"><i class="fa fa-facebook">&nbsp</i> Đăng nhập bằng facebook</a>
+                </div>
+                <div class="testsign" style="float:right;width:45%;">
+                    <a href="" class="btn btn-google"><i class="fa fa-google">&nbsp</i> Đăng nhập bằng Gmail</a>
+                </div>
+        </div>
+
+
     </div>
+</div> -->
+
+
+    <!-- Button trigger modal -->
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php">
+
+
+            <div class="container1">
+                <label for="uname">
+                    <b>Username</b>
+                </label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw">
+                    <b>Password</b>
+                </label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <div class="testsign">
+                    <a href="" class="btn btn-facebook" style="float:left;width:50%;">
+                        <i class="fa fa-facebook">&nbsp</i> Đăng nhập bằng facebook</a>
+                </div>
+                <div class="testsign" style="float:right;width:45%;">
+                    <a href="" class="btn btn-google">
+                        <i class="fa fa-google">&nbsp</i> Đăng nhập bằng Gmail</a>
+                </div>
+            </div>
+
+            <div class="container1" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-success1">Cancel</button>
+                <span class="psw">Forgot
+                    <a href="#">password?</a>
+                </span>
+            </div>
+
+
+
+
+        </form>
+    </div>
+
 
     <footer id="myFooter">
         <div class="container">
@@ -198,15 +298,25 @@
 
     </footer>
 
+
 </body>
 
 </html>
 
 <script>
-    function myFunction() {
-        if(document.getElementById("login").style.display === 'none'){
-            document.getElementById("login").style.display = 'block';
-        }else document.getElementById("login").style.display = 'none';
-        
+    // document.getElementById("open").onclick = function () {
+    //     document.getElementById("login").style.display = 'block';
+    // };
+    // document.getElementById("close").onclick = function () {
+    //     document.getElementById("login").style.display = 'none';
+    // };
+
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
 </script>
