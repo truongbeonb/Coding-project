@@ -556,7 +556,7 @@ select option {
   margin: 0em auto;
   background-color: #fff;
   border-radius: 4.2px;
-
+  display: none;
   position: fixed;
   z-index: 1050;
 }
@@ -612,3 +612,4 @@ select option {
 .row p{
     font-size: 9px;
 }
+
