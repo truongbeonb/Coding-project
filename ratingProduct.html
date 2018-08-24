@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqyjobZKV_bef9qMkQw69brKBHJO8Xtho&libraries=places"
+            type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+
+        <script type="text/javascript" src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    </head>
+
+    <title>Nhận xét về Website</title>
+</head>
+
+<body>
+
+
+    <div class="menubar container-fluid">
+        <nav class="navbar">
+
+
+            <form class="navbar-form navbar-left" action="order.jsp">
+                <div class="input-group form-group">
+                    <input type="text" name="id" class="form-control" placeholder="Enter your order ID">
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-info1 fa fa-search"></button>
+                    </div>
+                </div>
+            </form>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="" class="nav-link">
+                        <span class="fa fa-bell-o"> </span>&nbspThông báo
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link " onclick="myFunction()">
+                        <span class="fa fa-address-book-o"> </span>&nbspĐăng nhập
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="nav-link">
+                        <span class="fa fa-commenting"> </span>&nbspFeedback
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="nav-link">
+                        <span class="fa fa-address-book"> </span>&nbspĐăng ký
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+    <!-- Header -->
+
+    <!-- Body code here -->
+    <div class="container" style="padding: 0px;">
+        <div style="border-radius: 5px;
+                    background-color: aqua;
+                    margin: 10px;
+                    display: block;
+                    padding: 20px;
+
+        ">
+            <div class="row">
+                <div class="col-md-12" style="padding-left: 0px;">
+                    <div style="float: left;margin-left: 0px;">
+                        <p style="font-size: 20px">1. Đánh giá của bạn về sản phẩm này: </p>
+                    </div>
+                    <div style="margin-top: -10px;" class="rate">
+                        <input type="radio" id="star5" name="rate" value="5" /><label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" /><label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" /><label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" /><label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" /><label for="star1" title="text">1 star</label>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-bottom: 50px;">
+                <p style="font-size: 20px;">2. Vui lòng viết xét của bạn vào bên dưới:</p>
+                <form action="" style="display: block;">
+                    <textarea class="textfeedback" rows="15" cols="150" autofocus placeholder="Viết vào đây nội dung bạn muốn đánh giá về sản phẩm..." required></textarea>
+                    <br>
+                    <button type="submit" style="background-color: #E1B5B5; " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Gửi</strong></button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <!-- footer -->
+    <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2 class="logo">
+                        <a href="home.html">
+                            <img class="Logo5" src="media/Logo.jpg" alt="">
+                        </a>
+                    </h2>
+                </div>
+                <div class="col-sm-3">
+                    <h5>5 Chú ve sầu</h5>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/beovuive1" target="_blank">Nguyễn Quang Trường</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/t0ank55" target="_blank">Bùi Anh Tú</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/buithanhtung.317" target="_blank">Bùi Thanh Tùng</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/dovan.tuan.777" target="_blank">Đỗ Văn Tuấn</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/dangkhoaydl" target="_blank">Tạ Đăng Khoa</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.facebook.com/tuananh2209" target="_blank">Mentor: Nguyễn Tiến Tuấn Anh</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>About</h5>
+                    <div>
+
+                        <p>Idea</p>
+
+                    </div>
+
+                    <div>
+
+                        <p>Our open</p>
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Soure project
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-2">
+                    <h5>License</h5>
+                    <ul>
+                        <li>
+                            <a href="project.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="gallery.html">Safety</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <div class="social-networks">
+                        <a href="" class="twitter">
+                            <i class="">
+                                <img src="media/icons8-facebook-48.png" alt="" width="30px" height="30px">
+                            </i>
+                        </a>
+                        <a href="" class="facebook">
+                            <i class="">
+                                <img src="media/icons8-twitter-64.png" alt="" width="30px" height="30px">
+                            </i>
+                        </a>
+                        <a href="" class="youtube">
+                            <i class="">
+                                <img src="media/youtube.png" alt="" width="30px" height="30px">
+                            </i>
+                        </a>
+                    </div>
+                    <a href="feedback.html">
+                        <button type="button" class="btn btn-default">Feedback</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>©2018 Bản quyền thuộc về Team 5 chú ve sầu </p>
+        </div>
+
+    </footer>
+
+</body>
+
+
+</html>
+
+<script>
+    function myFunction() {
+        if (document.getElementById("login").style.display === 'none') {
+            document.getElementById("login").style.display = 'block';
+        } else document.getElementById("login").style.display = 'none';
+
+    }
+</script>

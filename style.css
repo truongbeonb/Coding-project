@@ -22,6 +22,7 @@
     color: #fff;
     background-color:rgba(38, 50, 56, 0.8);
     border-color: #46b8da;
+    width: 100%;
 }
 
 form > .textbox {
@@ -96,7 +97,7 @@ button.icon-hover:hover {
 }
 
 .input-group {
-    width: 0150%;
+    width: 0120%;
 }
 
 a:hover {
@@ -393,7 +394,7 @@ padding: 5px;
     
 }
 
-input,
+/* input,
 input[type="radio"] + label,
 input[type="checkbox"] + label:before,
 select option,
@@ -409,7 +410,7 @@ select {
   -o-transition: 0.35s ease-in-out;
   transition: 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
-}
+} */
 input:focus {
   outline: 0;
   border-color: #64ac15;
@@ -525,7 +526,7 @@ select option {
   left: 0;
   width: 3.4em;
   height: 3.4em;
-  line-height: 3.4em;
+  line-height: 4em;
   text-align: center;
   pointer-events: none;
 }
@@ -553,8 +554,6 @@ select option {
 .container1 {
     width: 100%;
     padding: 10px;
- 
-
 }
 
 
@@ -630,7 +629,8 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 20%;
+    float: left;
 }
 
 button:hover {
