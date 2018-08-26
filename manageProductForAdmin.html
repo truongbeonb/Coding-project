@@ -15,10 +15,10 @@
 
         <script type="text/javascript" src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" href="media/Icons/addProduct.png" type="image/x-icon">
+        <link rel="icon" href="media/Icons/manageProduct.png" type="image/x-icon">
     </head>
 
-    <title>Thêm mặt hàng</title>
+    <title>Quản lý sản phẩm</title>
 </head>
 
 <body>
@@ -26,9 +26,7 @@
 
     <div class="menubar container-fluid">
         <nav class="navbar">
-
-
-            <form class="navbar-form navbar-left" action="order.jsp">
+            <form class="navbar-form navbar-left" action="order.jsp" style="z-index: 0;">
                 <div class="input-group form-group">
                     <input type="text" name="id" class="form-control" placeholder="Enter your order ID">
                     <div class="input-group-btn">
@@ -42,102 +40,157 @@
                         <span class="fa fa-bell-o"> </span>&nbspThông báo
                     </a>
                 </li>
+
                 <li>
-                    <a class="nav-link " onclick="myFunction()">
-                        <span class="fa fa-address-book-o"> </span>&nbspĐăng nhập
-                    </a>
-                </li>
-                <li>
-                    <a href="feedback.html" class="nav-link">
+                    <a href="" class="nav-link">
                         <span class="fa fa-commenting"> </span>&nbspFeedback
                     </a>
                 </li>
                 <li>
-                    <a href="" class="nav-link">
+                    <a class="nav-link" onclick="document.getElementById('id01').style.display='block'">
+                        <span class="fa fa-address-book-o"> </span>&nbspĐăng nhập
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" onclick="document.getElementById('id02').style.display='block'">
                         <span class="fa fa-address-book"> </span>&nbspĐăng ký
                     </a>
                 </li>
-
             </ul>
         </nav>
     </div>
     <!-- Header -->
-    <div class="container">
+
+    <!-- Code here -->
+    <div class="containerManageProduct">
+
         <form>
-            <table style="line-height: 60px;">
-                <tr>
-                    <td style="display: inline;margin-right: 20px;">
-                        <span>1. Chọn ảnh (Ít nhất 3 ảnh): </span>
-                    </td>
-                    <td style="line-height: 25px;">
-                        <br>
-                        <input type="file" name="pic1" accept="image/*" required>
-                        <input type="file" name="pic2" accept="image/*" required>
-                        <input type="file" name="pic3" accept="image/*" required>
-                        <input type="file" name="pic4" accept="image/*">
-                        <input type="file" name="pic5" accept="image/*">
-                    </td>
-                </tr>
-                <tr>
-                    <td style="display: inline;margin-right: 20px;">
-                        <span>2. Tên mặt hàng: </span>
-
-                    </td>
-                    <td> <input id="addNameProduct" type="text" required></td>
-
-                </tr>
-                <tr>
-                    <td style="display: inline;margin-right: 20px;">
-                        <span>3. Giá tiền:</span>
-
-                    </td>
-                    <td><input id="addPrice" style="line-height:20px" type="number" min="0" max="20000000" step="1000" name="price"
-                            id="priceProduct" required="required">
-                        <i>VNĐ</i>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td style="display: inline;margin-right: 20px;">
-                        <span>4. Danh mục sản phẩm:</span>
-
-                    </td>
-                    <td> <select id="adCategory" aufocus>
-                            <option value="drink">Đồ uống nhanh</option>
-                            <option value="fastFod">Đồ ăn vặt</option>
-                            <option value="Clothes">Quần áo</option>
-                            <option value="Technolodies">Đồ công nghệ</option>
-                            <option value="LaunDry">Dịch vụ giặt là</option>
-                            <option value="WaterSercies">Ship nước</option>
-                            <option value="PhoneCard">Thẻ điện thoại</option>
-                            <option value="RiceShip">Đặt cơm</option>
-                        </select></td>
-
-                </tr>
-                <tr>
-                    <td style="display: inline;margin-right: 20px;">
-                        <span>5. Mô tả sản phẩm:</span>
-
-                    </td>
-                    <td> <textarea style="line-height:20px" id="addDescription" rows="5" cols="100" autofocus placeholder="Mô tả sản phảm của bạn..."
-                            required></textarea></td>
-
-                </tr>
-                <tr>
-                    <td style="line-height: 30px;">
-                        <input type="submit" value="Thêm mặt hàng" id="addProduct">
-                    </td>
-                </tr>
-            </table>
-            <br>
-
+            <span style="font-size: 30px;
+                color: rgb(255, 238, 0);
+                ">Quản lý sản phẩm</span>
+            <input id="filterProductNameForAdmin" required autofocus>
+            <button id="filterProductName-btn">Lọc theo tên sản phẩm</button>
 
 
         </form>
+        <form>
+            <table id="manageProduct-table" border="2">
+                <tr>
+                    <th>Chọn</th>
+                    <th>Tên sản phẩm</th>
+                    <th>ID</th>
+                    <th>Bình chọn (Sao)</th>
+                    <th>Người bán</th>
+                    <th>Xóa</th>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Cơm rang dưa bò</td>
+                    <td>1234</td>
+                    <td>Long Xuyên</td>
+                    <td>0166266626</td>
+                    <td><button id="deleteProduct" type="menu"><img src="media/Icons/delete.png" width="30px" height="30px"></button></td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Cơm rang dưa bò</td>
+                    <td>1234</td>
+                    <td>Long Xuyên</td>
+                    <td>0166266626</td>
+                    <td><button id="deleteProduct" type="menu"><img src="media/Icons/delete.png" width="30px" height="30px"></button></td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Cơm rang dưa bò</td>
+                    <td>1234</td>
+                    <td>Long Xuyên</td>
+                    <td>0166266626</td>
+                    <td><button id="deleteProduct" type="menu"><img src="media/Icons/delete.png" width="30px" height="30px"></button></td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Cơm rang dưa bò</td>
+                    <td>1234</td>
+                    <td>Long Xuyên</td>
+                    <td>0166266626</td>
+                    <td><button id="deleteProduct" type="menu"><img src="media/Icons/delete.png" width="30px" height="30px"></button></td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Cơm rang dưa bò</td>
+                    <td>1234</td>
+                    <td>Long Xuyên</td>
+                    <td>0166266626</td>
+                    <td><button id="deleteProduct" type="menu"><img src="media/Icons/delete.png" width="30px" height="30px"></button></td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Cơm rang dưa bò</td>
+                    <td>1234</td>
+                    <td>Long Xuyên</td>
+                    <td>0166266626</td>
+                    <td><button id="deleteProduct" type="menu"><img src="media/Icons/delete.png" width="30px" height="30px"></button></td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Cơm rang dưa bò</td>
+                    <td>1234</td>
+                    <td>Long Xuyên</td>
+                    <td>0166266626</td>
+                    <td><button id="deleteProduct" type="menu"><img src="media/Icons/delete.png" width="30px" height="30px"></button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Cơm rang dưa bò</td>
+                    <td>1234</td>
+                    <td>Long Xuyên</td>
+                    <td>0166266626</td>
+                    <td><button id="deleteProduct" type="menu"><img src="media/Icons/delete.png" width="30px" height="30px"></button></td>
+                </tr>
+
+
+
+            </table>
+            <button id="deleteAllChosen" type="menu">Xóa tất cả người dùng đã chọn</button>
+        </form>
+        <div class=" pgi">
+            <ul class="pagination">
+                <li>
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a href="#">..</a>
+                </li>
+            </ul>
+        </div>
+
     </div>
 
 
 
+
+
+
+    </div>
 
 
     <!-- footer -->
@@ -240,7 +293,7 @@
     </footer>
 
 
-
+    <script src="main.js"></script>
 </body>
 
 </html>

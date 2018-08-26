@@ -764,3 +764,105 @@ span.psw {
     font-size: 20px;
     color: red;
 }
+
+
+/* Style Home page for admin */
+.containerHomepageAdmin{
+    width: 80%;
+    background-color: rgb(113, 6, 253);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+.titleHomepageForAdmin{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    color: rgb(255, 238, 0);
+}
+#mP-btn{
+    padding: 20px;
+    background-color: rgb(0, 183, 255);
+    margin-bottom: 50px;
+}
+#mU-btn{
+    padding: 20px;
+    background-color: rgb(0, 183, 255);
+}
+
+/* Style for manage User */
+.containerManageUser{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: rgb(113, 6, 253); */
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#filterUserNameForAdmin{
+    height: 48px;
+}
+#manageUser-table{
+    width: 95%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border: 1 solid black;
+}
+#manageUser-table, th{
+    text-align: center;
+}
+#manageUser-table, th, td, tr{
+    border: 1 solid black;
+    align-items: center;
+}
+#deleteUser{
+    background-color: #00aced;
+    width: 65px;
+    border-radius: 5px;
+}
+#deleteAllChosen{
+    background-color: red;
+    margin-left: 28px;
+}
+
+/* Style manage Product for Admin */
+.containerManageProduct{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: rgb(113, 6, 253); */
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#filterProductNameForAdmin{
+    height: 48px;
+}
+#manageProduct-table{
+    width: 95%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border: 1 solid black;
+}
+#manageProduct-table, th{
+    text-align: center;
+}
+#manageProduct-table, th, td, tr{
+    border: 1 solid black;
+    align-items: center; 
+}
+#deleteProduct{
+    background-color: #00aced;
+    width: 65px;
+    border-radius: 5px;
+}
+#deleteAllChosen{
+    background-color: red;
+    margin-left: 28px;
+}
