@@ -15,10 +15,9 @@
 
         <script type="text/javascript" src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
     </head>
 
-    <title>Nhận xét về Website</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -48,7 +47,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="" class="nav-link">
+                    <a href="feedback.html" class="nav-link">
                         <span class="fa fa-commenting"> </span>&nbspFeedback
                     </a>
                 </li>
@@ -62,44 +61,81 @@
         </nav>
     </div>
     <!-- Header -->
+    <div class="container">
+        <form>
+            <table style="line-height: 60px;">
+                <tr>
+                    <td style="display: inline;margin-right: 20px;">
+                        <span>1. Chọn ảnh (Ít nhất 3 ảnh): </span>
+                    </td>
+                    <td style="line-height: 25px;">
+                        <br>
+                        <input type="file" name="pic1" accept="image/*">
+                        <input type="file" name="pic2" accept="image/*">
+                        <input type="file" name="pic3" accept="image/*">
+                        <input type="file" name="pic4" accept="image/*">
+                        <input type="file" name="pic5" accept="image/*">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="display: inline;margin-right: 20px;">
+                        <span>2. Tên mặt hàng: </span>
 
-    <!-- Body code here -->
-    <div class="container" style="padding: 0px;">
-        <div style="border-radius: 5px;
-                    background-color: aquamarine;
-                    margin: 10px;
-                    display: block;
-                    padding: 20px;
+                    </td>
+                    <td> <input id="addNameProduct" type="text" required></td>
 
-        ">
-            <div class="row">
-                <div class="col-md-12" style="padding-left: 0px;">
-                    <div style="float: left;margin-left: 0px;">
-                        <p style="font-size: 20px">1. Đánh giá của bạn về sản phẩm này: </p>
-                    </div>
-                    <div style="margin-top: -10px;" class="rate">
-                        <input type="radio" id="star5" name="rate" value="5" /><label for="star5" title="text">5 stars</label>
-                        <input type="radio" id="star4" name="rate" value="4" /><label for="star4" title="text">4 stars</label>
-                        <input type="radio" id="star3" name="rate" value="3" /><label for="star3" title="text">3 stars</label>
-                        <input type="radio" id="star2" name="rate" value="2" /><label for="star2" title="text">2 stars</label>
-                        <input type="radio" id="star1" name="rate" value="1" /><label for="star1" title="text">1 star</label>
-                    </div>
-                </div>
-            </div>
-            <div style="padding-bottom: 50px;">
-                <p style="font-size: 20px;">2. Vui lòng viết xét của bạn vào bên dưới:</p>
-                <form action="" style="display: block;">
-                    <textarea class="textfeedback" rows="15" cols="150" autofocus placeholder="Viết vào đây nội dung bạn muốn đánh giá về sản phẩm..." required></textarea>
-                    <br>
-                    <button type="submit" style="background-color: blue; " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><strong>Gửi</strong></button>
-                </form>
-            </div>
-        </div>
+                </tr>
+                <tr>
+                    <td style="display: inline;margin-right: 20px;">
+                        <span>3. Giá tiền:</span>
+
+                    </td>
+                    <td><input id="addPrice" style="line-height:20px" type="number" min="0" max="20000000" step="1000" name="price"
+                            id="priceProduct" required="required">
+                        <i>VNĐ</i>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="display: inline;margin-right: 20px;">
+                        <span>4. Danh mục sản phẩm:</span>
+
+                    </td>
+                    <td> <select id="adCategory" aufocus>
+                            <option value="drink">Đồ uống nhanh</option>
+                            <option value="fastFod">Đồ ăn vặt</option>
+                            <option value="Clothes">Quần áo</option>
+                            <option value="Technolodies">Đồ công nghệ</option>
+                            <option value="LaunDry">Dịch vụ giặt là</option>
+                            <option value="WaterSercies">Ship nước</option>
+                            <option value="PhoneCard">Thẻ điện thoại</option>
+                            <option value="RiceShip">Đặt cơm</option>
+                        </select></td>
+
+                </tr>
+                <tr>
+                    <td style="display: inline;margin-right: 20px;">
+                        <span>5. Mô tả sản phẩm:</span>
+
+                    </td>
+                    <td> <textarea style="line-height:20px" id="addDescription" rows="5" cols="100" autofocus placeholder="Mô tả sản phảm của bạn..."
+                            required></textarea></td>
+
+                </tr>
+                <tr>
+                    <td style="line-height: 30px;">
+                        <input type="submit" value="Thêm mặt hàng" id="addProduct">
+                    </td>
+                </tr>
+            </table>
+            <br>
 
 
 
-
+        </form>
     </div>
+
+
 
 
 
@@ -202,16 +238,8 @@
 
     </footer>
 
+
+
 </body>
 
-
 </html>
-
-<script>
-    function myFunction() {
-        if (document.getElementById("login").style.display === 'none') {
-            document.getElementById("login").style.display = 'block';
-        } else document.getElementById("login").style.display = 'none';
-
-    }
-</script>

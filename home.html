@@ -25,9 +25,7 @@
 
     <div class="menubar container-fluid">
         <nav class="navbar">
-
-
-            <form class="navbar-form navbar-left" action="order.jsp">
+            <form class="navbar-form navbar-left" action="order.jsp" style="z-index: 0;">
                 <div class="input-group form-group">
                     <input type="text" name="id" class="form-control" placeholder="Enter your order ID">
                     <div class="input-group-btn">
@@ -41,28 +39,112 @@
                         <span class="fa fa-bell-o"> </span>&nbspThông báo
                     </a>
                 </li>
-                <li>
-                    <a class="nav-link " onclick="myFunction()">
-                        <span class="fa fa-address-book-o"> </span>&nbspĐăng nhập
-                    </a>
-                </li>
+                
                 <li>
                     <a href="feedback.html" class="nav-link">
                         <span class="fa fa-commenting"> </span>&nbspFeedback
                     </a>
                 </li>
                 <li>
-                    <a href="" class="nav-link">
+                    <a class="nav-link" onclick="document.getElementById('id01').style.display='block'">
+                        <span class="fa fa-address-book-o"> </span>&nbspĐăng nhập
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" onclick="document.getElementById('id02').style.display='block'">
                         <span class="fa fa-address-book"> </span>&nbspĐăng ký
                     </a>
                 </li>
-
             </ul>
         </nav>
     </div>
     <!-- Header -->
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="container1">
+                <h2 class="testsign">Đăng nhập Hola Market</h2>
+                <label for="uname">
+                    <b>Username</b>
+                </label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
 
+                <label for="psw">
+                    <b>Password</b>
+                </label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
 
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <label style="float: right;">
+                    <b>Forgot
+                        <a href="#"> password?</a>
+                    </b>
+                </label>
+
+                <p></p>
+                <button class="btn btn-facebook" style="float: left;">
+                    <i class="fa fa-facebook">&nbsp</i> Đăng nhập bằng facebook</button>
+                <button class="btn btn-google" style="float: right;">
+                    <i class="fa fa-google">&nbsp</i> Đăng nhập bằng Gmail</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">X</button>
+            </div>
+        </form>
+    </div>
+    <div id="id02" class="modal">
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="container1">
+                <!-- <div>
+                    <span>
+                        <h3 class="testsign" id="login" onclick="document.getElementById('id02').style.display='block'">Đăng nhập</h3>
+                    </span>
+                    <span>
+                        <h3 class="testsign" id="signup" onclick="myFunction()">Đăng ký</h3>
+                    </span>
+                </div> -->
+                <h2 class="testsign">Đăng ký Hola Market</h2>
+                <label for="email">
+                    <b>Email</b>
+                </label>
+                <input type="text" placeholder="EX: abc@xyz.com" name="email" required>
+                <label for="name">
+                    <b>Full name</b>
+                </label>
+                <input type="text" placeholder="VD: Nguyễn Văn A" name="name" required>
+
+                <label for="psw">
+                    <b>Password</b>
+                </label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="repsw">
+                    <b>Retype Password</b>
+                </label>
+                <input type="password" placeholder="Retype Password" name="repsw" required>
+                <label for="phone">
+                    <b>Số điện thoại</b>
+                </label>
+                <input type="text" placeholder="VD: 1234******" name="phone" required>
+                <label for="gender">
+                    <b>Giới tính</b>
+                </label>
+                <input type="radio" name="gender" value="male"> Nam
+                <input type="radio" name="gender" value="male"> Nữ
+                <p></p>
+                <label for="address">
+                    <b>Phòng</b>
+                </label>
+                <input type="text" placeholder="VD: D113" name="address" required>
+                <label>
+                    <input type="checkbox" checked="checked" name="accept"> Tôi đồng ý với điều khoản và chính sách của Hola Market
+                </label>
+                <button type="submit">Đăng ký</button>
+                <p></p>
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">X</button>
+            </div>
+        </form>
+    </div>
 
     <div class="container" style="margin-top: 5px;">
         <div class="cate">
@@ -509,7 +591,7 @@
 </footer>
 
     
-
+<script src="main.js"></script>
 </body>
 
 </html>
