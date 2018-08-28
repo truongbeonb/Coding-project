@@ -15,21 +15,16 @@
 
         <script type="text/javascript" src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" href="media/Icons/history.png" type="image/x-icon">
+        <link rel="icon" href="media/Icons/ordermanager.png" type="image/x-icon">
     </head>
 
-    <title>Lịch sử mua hàng</title>
-
+    <title>Quản lí đơn hàng đến</title>
 </head>
 
 <body>
-
-
     <div class="menubar container-fluid">
         <nav class="navbar">
-
-
-            <form class="navbar-form navbar-left" action="order.jsp">
+            <form class="navbar-form navbar-left" action="order.jsp" style="z-index: 0;">
                 <div class="input-group form-group">
                     <input type="text" name="id" class="form-control" placeholder="Enter your order ID">
                     <div class="input-group-btn">
@@ -43,117 +38,165 @@
                         <span class="fa fa-bell-o"> </span>&nbspThông báo
                     </a>
                 </li>
-                <li>
-                    <a class="nav-link " onclick="myFunction()">
-                        <span class="fa fa-address-book-o"> </span>&nbspĐăng nhập
-                    </a>
-                </li>
+
                 <li>
                     <a href="feedback.html" class="nav-link">
                         <span class="fa fa-commenting"> </span>&nbspFeedback
                     </a>
                 </li>
                 <li>
-                    <a href="" class="nav-link">
+                    <a class="nav-link" onclick="document.getElementById('id01').style.display='block'">
+                        <span class="fa fa-address-book-o"> </span>&nbspĐăng nhập
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" onclick="document.getElementById('id02').style.display='block'">
                         <span class="fa fa-address-book"> </span>&nbspĐăng ký
                     </a>
                 </li>
-
             </ul>
         </nav>
     </div>
     <!-- Header -->
 
-
-
-    <div class="container" style="margin-top: 10px; padding-bottom: 10px">
-        <div>
-            <center><span class="headerHistoryBuy">Lịch sử mua hàng</span></center>
+    <div class="container">
+        <h3 style="color: red;float: left; width: 70%;">Quản lí các đơn hàng đến</h3>
+        <div style="float: right; width: 20%;">
+            <span>
+                <button style="width: 30%;" class="btn">Prev</button> &nbsp0-6 of 34 &nbsp
+                <button style="width: 30%;" class="btn">Next</button>
+            </span>
         </div>
-        <table id="buyHistoryElement">
-            <tr>
-                <td id="historyLeft"> <img src="media/phpThumb_generated_thumbnail.png" width="300px" height="300px"></td>
-                <td id="historyRight">
-                    <span id="productName">Bò húc</span>
-                    <span><h4><i>Số lượng đã đặt mua: </i></h4><span id="countProductHistory">3</span></span>
-                    <span><h4><i>Tình trạng đơn hàng: </i></h4><span id="statusProductHistory">Đã xét đơn</span></span>
-                    <br>
-                    <button id="cancelOrder" type="button">Hủy đơn</button>
-                    <button id="deleteHistoryBuy" type="menu">Xóa lịch sử</button>
-
-                </td>
-            </tr>
-
-            <tr>
-                <td id="historyLeft"> <img src="media/phpThumb_generated_thumbnail.png" width="300px" height="300px"></td>
-                <td id="historyRight">
-                    <span id="productName">Bò húc</span>
-                    <span><h4><i>Số lượng đã đặt mua: </i></h4><span id="countProductHistory">3</span></span>
-                    <span><h4><i>Tình trạng đơn hàng: </i></h4><span id="statusProductHistory">Đã từ chối ship</span></span>
-                    <br>
-                    <!-- <button id="cancelOrder" type="button">Hủy đơn</button> -->
-                    <button id="deleteHistoryBuy" type="menu">Xóa lịch sử</button>
-
-                </td>
-            </tr>
-
-
-            <tr>
-                <td id="historyLeft"> <img src="media/phpThumb_generated_thumbnail.png" width="300px" height="300px"></td>
-                <td id="historyRight">
-                    <span id="productName">Bò húc</span>
-                    <span><h4><i>Số lượng đã đặt mua: </i></h4><span id="countProductHistory">3</span></span>
-                    <span><h4><i>Tình trạng đơn hàng: </i></h4><span id="statusProductHistory">Đang ship đi</span></span>
-                    <br>
-                    <!-- <button id="cancelOrder" type="button">Hủy đơn</button> -->
-                    <button id="deleteHistoryBuy" type="menu">Xóa lịch sử</button>
-
-                </td>
-            </tr>
-
-
-            <tr>
-                <td id="historyLeft"> <img src="media/phpThumb_generated_thumbnail.png" width="300px" height="300px"></td>
-                <td id="historyRight">
-                    <span id="productName">Bò húc</span>
-                    <span><h4><i>Số lượng đã đặt mua: </i></h4><span id="countProductHistory">3</span></span>
-                    <span><h4><i>Tình trạng đơn hàng: </i></h4><span id="statusProductHistory">Đang ship đi</span></span>
-                    <br>
-                    <!-- <button id="cancelOrder" type="button">Hủy đơn</button> -->
-                    <button id="deleteHistoryBuy" type="menu">Xóa lịch sử</button>
-
-                </td>
-            </tr>
-        </table>
     </div>
 
-    </div>
 
-    <div class=" pgi">
-            <ul class="pagination">
-                <li>
-                    <a href="#">1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li>
-                    <a href="#">3</a>
-                </li>
-                <li>
-                    <a href="#">4</a>
-                </li>
-                <li>
-                    <a href="#">5</a>
-                </li>
-                <li>
-                    <a href="#">..</a>
-                </li>
-            </ul>
+    <div class="container">
+        <div id="bg">
+            <table>
+                <tr>
+                    <th>STT</th>
+                    <th>tên sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>người mua</th>
+                    <th>Room</th>
+                    <th>Còn lại</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>bò húc</td>
+                    <td>1</td>
+                    <td>Trường</td>
+                    <td>D113</td>
+                    <td>10</td>
+                    <td>
+                        <form>
+                            <input type="radio" name="action" id="">Đồng ý
+                            <input type="radio" name="action" id="">Từ chôi
+                        </form>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>bò húc</td>
+                    <td>1</td>
+                    <td>Trường</td>
+                    <td>D113</td>
+                    <td>10</td>
+                    <td>
+                        <form>
+                            <input type="radio" name="action" id="">Đồng ý
+                            <input type="radio" name="action" id="">Từ chôi
+                        </form>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>bò húc</td>
+                    <td>1</td>
+                    <td>Trường</td>
+                    <td>D113</td>
+                    <td>10</td>
+                    <td>
+                        <form>
+                            <input type="radio" name="action" id="">Đồng ý
+                            <input type="radio" name="action" id="">Từ chôi
+                        </form>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>bò húc</td>
+                    <td>10</td>
+                    <td>Trường</td>
+                    <td>D113</td>
+                    <td>10</td>
+                    <td>
+                        <form>
+                            <input type="radio" name="action" id="">Đồng ý
+                            <input type="radio" name="action" id="">Từ chôi
+                        </form>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>bò húc</td>
+                    <td>10</td>
+                    <td>Trường</td>
+                    <td>D113</td>
+                    <td>10</td>
+                    <td>
+                        <form>
+                            <input type="radio" name="action" id="">Đồng ý
+                            <input type="radio" name="action" id="">Từ chôi
+                        </form>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>bò húc</td>
+                    <td>10</td>
+                    <td>Trường</td>
+                    <td>D113</td>
+                    <td>10</td>
+                    <td>
+                        <form>
+                            <input type="radio" name="action" id="">Đồng ý
+                            <input type="radio" name="action" id="">Từ chôi
+                        </form>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>bò húc</td>
+                    <td>10</td>
+                    <td>Trường</td>
+                    <td>D113</td>
+                    <td>10</td>
+                    <td>
+                        <form>
+                            <input type="radio" name="action" id="">Đồng ý
+                            <input type="radio" name="action" id="">Từ chôi
+                        </form>
+
+                    </td>
+                </tr>
+            </table>
+            <button type="menu">Update</button>
         </div>
-
-
-
+    </div>
 
 
     <!-- footer -->
@@ -254,7 +297,6 @@
         </div>
 
     </footer>
-
 
 </body>
 
